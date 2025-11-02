@@ -28,3 +28,5 @@ if (!admin.apps.length) {
 
 const db = admin.firestore();
 const reviewsCol = db.collection('reviews');
+
+module.exports = router;
