@@ -1,12 +1,13 @@
 const express = require('express');
 const admin = require('firebase-admin');
+const serviceAccount = require("./serviceAccountKey.json");
 const router = express.Router();
 
 // Initialize Firebase Admin using GOOGLE_APPLICATION_CREDENTIALS env var (or ADC)
 if (!admin.apps.length) {
   try {
     admin.initializeApp({
-      credential: admin.credential.applicationDefault()
+      credential: admin.credential.cert(serviceAccount)
     });
     console.log('✅ Firebase Admin initialized');
   } catch (e) {
