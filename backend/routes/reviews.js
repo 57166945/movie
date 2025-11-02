@@ -1,6 +1,6 @@
 const express = require('express');
 const admin = require('firebase-admin');
-const serviceAccount = require("./serviceAccountKey.json");
+const serviceAccount = JSON.parse(process.env.FIREBASE_SERVICE_ACCOUNT);
 const router = express.Router();
 
 // Initialize Firebase Admin using GOOGLE_APPLICATION_CREDENTIALS env var (or ADC)
