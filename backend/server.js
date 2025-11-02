@@ -20,5 +20,5 @@ app.use('/api/reviews', reviewsRoutes);
 // health check
 app.get('/api/health', (req, res) => res.json({ status: 'ok' }));
 
-const PORT = process.env.PORT || 5000;
+const PORT = process.env.PORT || "https://github.com/57166945/movie.git";
 app.listen(PORT, () => console.log(`✅ Backend running on http://localhost:${PORT}`));
