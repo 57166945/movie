@@ -23,6 +23,7 @@ router.get('/search', async (req, res) => {
     });
     // return the same shape your frontend expects (r.data)
     res.json(r.data);
+
   } catch (err) {
     console.error('TMDb Search Error:', err?.response?.data || err.message);
     const status = err.response?.status || 500;
